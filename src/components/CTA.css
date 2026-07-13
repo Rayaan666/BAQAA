@@ -1,0 +1,139 @@
+.cta-section {
+  position: relative;
+  width: 100%;
+  height: 600px; /* Cinematic height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.cta-bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.cta-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cta-overlay-refined {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(18, 18, 18, 0.34) 0%,
+    rgba(18, 18, 18, 0.38) 55%,
+    rgba(18, 18, 18, 0.42) 100%
+  );
+  z-index: 2;
+}
+
+.cta-content-centered {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: #fff;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+.cta-heading-huge {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin-bottom: 40px;
+  line-height: 1.2;
+  color: #ffffff;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.9), 0 8px 28px rgba(0, 0, 0, 0.7);
+}
+
+.cta-subtitle-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.cta-italic-line {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  opacity: 0.95;
+  line-height: 1.6;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95), 0 6px 20px rgba(0, 0, 0, 0.75);
+}
+
+.btn-cta-contact {
+  display: inline-block;
+  background-color: #E2DCCF; /* Soft ivory/beige */
+  color: #555;
+  border: none;
+  padding: 18px 50px;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.btn-cta-contact:hover {
+  background-color: #fff;
+  transform: translateY(-5px);
+  color: #000;
+}
+
+@media (max-width: 1024px) {
+  .cta-heading-huge {
+    font-size: 2.5rem;
+  }
+  .cta-italic-line {
+    font-size: 1rem;
+  }
+  .cta-section {
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-section {
+    height: auto;
+    padding: 80px 20px;
+  }
+  .cta-heading-huge {
+    font-size: 1.8rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 25px;
+    line-height: 1.3;
+  }
+  .cta-subtitle-lines {
+    margin-bottom: 30px;
+  }
+  .cta-italic-line {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .btn-cta-contact {
+    padding: 15px 40px;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+  }
+}

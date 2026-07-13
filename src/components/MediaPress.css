@@ -1,0 +1,216 @@
+.media-snippets-section {
+  background-color: #F0EAE1; /* Clean, slightly darker beige to match Featured */
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.media-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.vertical-divider-media {
+  width: 1px;
+  height: 100px;
+  background: linear-gradient(to bottom, #C0C0C0, transparent);
+  margin-bottom: 20px;
+}
+
+.media-title {
+  font-family: var(--font-serif);
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 2.2rem;
+  color: #555555;
+  font-weight: 300;
+}
+
+/* Slider Layout */
+.media-slider-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 5%;
+  position: relative;
+}
+
+.slider-arrow {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+}
+
+.slider-arrow:hover {
+  opacity: 1;
+}
+
+.media-content-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FAF9F6;
+  padding: 60px 80px;
+  border: 1px solid rgba(0,0,0,0.02);
+  max-width: 1100px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.media-content-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  width: 100%;
+}
+
+.magazine-cover-box {
+  flex: 0 0 320px;
+  box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+}
+
+.magazine-img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+}
+
+/* 5th Snippet Landscape Override */
+.magazine-cover-box.landscape-mode {
+  flex: 0 0 450px;
+}
+
+.landscape-mode .magazine-img {
+  aspect-ratio: 1.5 / 1;
+  object-fit: contain;
+  background-color: #fff;
+  max-height: 300px;
+}
+
+.quote-panel-refined {
+  flex: 1;
+  position: relative;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.quote-mark {
+  font-family: var(--font-serif);
+  font-size: 5rem;
+  color: #E8E8E8;
+  position: absolute;
+  line-height: 1;
+  user-select: none;
+}
+
+.quote-mark.open {
+  top: -20px;
+  left: -20px;
+}
+
+.quote-mark.close {
+  bottom: 48px;
+  right: -20px;
+}
+
+.press-quote-text {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #6B6B6B;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.pub-name {
+  font-family: var(--font-serif);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.pub-link {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  color: #A0A0A0;
+  letter-spacing: 0.05em;
+}
+
+/* Pagination */
+.media-pagination {
+  display: flex;
+  gap: 10px;
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+
+.p-dot {
+  width: 5px;
+  height: 5px;
+  background-color: #DEDEDE;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.p-dot.active {
+  background-color: #8C8C8C;
+  transform: scale(1.2);
+}
+
+@media (max-width: 1024px) {
+  .media-content-panel {
+    padding: 40px;
+  }
+  .media-content-inner {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .magazine-cover-box {
+    flex: 0 0 280px;
+  }
+  
+  .magazine-cover-box.landscape-mode {
+    flex: 0 0 100%;
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .media-slider-wrapper {
+    padding: 0 50px;
+  }
+  .slider-arrow {
+    display: flex;
+    position: absolute;
+    top: 160px;
+    transform: translateY(-50%);
+    z-index: 20;
+    padding: 10px;
+  }
+  .left-arrow {
+    left: 10px;
+  }
+  .right-arrow {
+    right: 10px;
+  }
+  .media-content-panel {
+    padding: 30px 20px;
+  }
+
+  .quote-mark.close {
+    bottom: 64px;
+  }
+}

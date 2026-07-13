@@ -1,0 +1,216 @@
+.brand-milestones-v2 {
+  background-color: #F0EAE1; /* Clean, slightly darker beige to match Featured */
+  padding: 120px 5%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.milestones-bg-accents {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.accent-circle {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(192, 192, 192, 0.05) 0%, transparent 70%);
+}
+
+.top-left { top: -200px; left: -200px; }
+.bottom-right { bottom: -200px; right: -200px; }
+
+.milestones-frame {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  padding: 80px 40px;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+/* Corner Accents */
+.frame-corner {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #C0C0C0;
+}
+
+.tl { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+.tr { top: -1px; right: -1px; border-left: none; border-bottom: none; }
+.bl { bottom: -1px; left: -1px; border-right: none; border-top: none; }
+.br { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+
+.milestones-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.milestones-top-info {
+  text-align: center;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vertical-divider-milestones {
+  width: 1px;
+  height: 100px;
+  background: linear-gradient(to bottom, #C0C0C0, transparent);
+  margin-bottom: 30px;
+}
+
+.milestone-pre-title {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.5em;
+  color: #8C8C8C;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.milestone-main-title {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  color: #333;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  margin-bottom: 25px;
+}
+
+.milestone-divider {
+  width: 60px;
+  height: 1px;
+  background-color: #C0C0C0;
+  margin: 0 auto;
+}
+
+.stats-showcase {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  gap: 60px;
+}
+
+.legacy-stat-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.legacy-number-wrapper {
+  margin-bottom: 8px;
+}
+
+.legacy-number {
+  font-family: var(--font-serif);
+  font-size: 7rem;
+  line-height: 1;
+  color: #1A1A1A;
+  font-weight: 300;
+  display: flex;
+  align-items: flex-start;
+}
+
+.plus-sign {
+  font-size: 2.5rem;
+  color: #8C8C8C;
+  margin-left: 5px;
+  margin-top: 10px;
+  font-weight: 200;
+}
+
+.legacy-label-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.year-ornament {
+  width: 80px;
+  height: 12px;
+  margin: 5px auto;
+}
+
+.year-ornament svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.legacy-label {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 0.7rem;
+  color: #555;
+  font-weight: 400;
+  line-height: 2;
+}
+
+/* Vertical Separator */
+.stats-vertical-separator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.separator-line {
+  width: 1px;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, #DEDEDE, transparent);
+}
+
+.separator-diamond {
+  width: 8px;
+  height: 8px;
+  border: 1px solid #C0C0C0;
+  transform: rotate(45deg);
+  margin: 15px 0;
+}
+
+@media (max-width: 1024px) {
+  .legacy-number { font-size: 5rem; }
+  .milestone-main-title { font-size: 1.8rem; }
+}
+
+@media (max-width: 768px) {
+  .brand-milestones-v2 { padding: 40px 15px; }
+  .milestones-frame { padding: 30px 15px; }
+  .milestones-top-info { margin-bottom: 35px; }
+  .vertical-divider-milestones {
+    height: 40px;
+    margin-bottom: 15px;
+  }
+  .stats-showcase {
+    flex-direction: column;
+    gap: 35px;
+  }
+  .stats-vertical-separator {
+    display: none;
+  }
+  .legacy-number { font-size: 4.5rem; }
+  .milestone-main-title { font-size: 1.5rem; }
+  .legacy-label { font-size: 0.65rem; }
+}

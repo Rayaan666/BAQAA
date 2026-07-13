@@ -1,0 +1,162 @@
+.featured-section {
+  background-color: #F0EAE1; /* Clean, slightly darker beige */
+  padding: 40px 0 80px 0;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.featured-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  padding: 0 20px;
+}
+
+.vertical-divider {
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, #C0C0C0, transparent);
+  height: 80px;
+}
+
+.top-divider {
+  margin-bottom: 20px;
+}
+
+.middle-divider {
+  margin: 40px 0;
+}
+
+.featured-logos-wrapper {
+  width: 100%;
+}
+
+.featured-on-text {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  font-size: 0.75rem;
+  color: #666666;
+  margin-bottom: 50px;
+  display: block;
+  font-weight: 300;
+}
+
+.logos-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  width: 100%;
+}
+
+.logo-brand {
+  font-family: var(--font-serif);
+  color: #1A1A1A;
+  font-weight: 400;
+  white-space: nowrap;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.brand-story-wrapper {
+  max-width: 900px;
+}
+
+.brand-heading {
+  font-family: var(--font-serif);
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: #1A1A1A;
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+.brand-description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.brand-description-primary {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  line-height: 2.2;
+  color: #333333;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+.brand-quotes {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border-top: 1px solid rgba(192, 192, 192, 0.3);
+  padding-top: 30px;
+  margin-top: 10px;
+}
+
+.brand-quote-item {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 2.0;
+  color: #555555;
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+}
+
+/* Specific text sizes for logos */
+.logo-large { font-size: 2.5rem; }
+.logo-medium { font-size: 1.6rem; }
+
+.floral-accent {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-image: url('/images/eucalyptus.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  opacity: 0.8;
+  pointer-events: none;
+  bottom: -20px;
+  right: -20px;
+  z-index: 1;
+  mix-blend-mode: multiply;
+}
+
+.desktop-only {
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .logos-row { gap: 40px; }
+  .brand-heading { font-size: 1.8rem; }
+  .desktop-only { display: none; }
+}
+
+@media (max-width: 768px) {
+  .featured-section {
+    padding: 30px 0 30px 0;
+  }
+  .logos-row { gap: 30px; }
+  .logo-large { font-size: 1.8rem; }
+  .logo-medium { font-size: 1.2rem; }
+  .brand-heading { font-size: 1.5rem; }
+  .brand-description-primary { font-size: 1.1rem; line-height: 2.0; }
+  .brand-quote-item { font-size: 1rem; line-height: 1.8; }
+}

@@ -1,0 +1,198 @@
+.signature-section {
+  background-color: #FDFCF8; /* Soft ivory (matching Founder section) */
+  padding: 0 0 40px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-header-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.vertical-divider-work {
+  width: 1px;
+  height: 90px;
+  background-color: #C0C0C0;
+  margin-bottom: 30px;
+}
+
+.work-heading {
+  font-family: var(--font-serif);
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 2.2rem;
+  color: #555555;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.work-subtitle {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #6B6B6B;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.signature-main-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1400px;
+  width: 90%;
+  gap: 80px;
+  margin-bottom: 30px;
+}
+
+/* Left Side: Navigation */
+.project-navigation {
+  flex: 0 0 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-top: 20px;
+}
+
+.project-nav-item {
+  position: relative;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+
+.project-number {
+  font-family: var(--font-serif);
+  font-size: 0.8rem;
+  color: #A0A0A0;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.project-title {
+  font-family: var(--font-serif);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.85rem;
+  color: #6B6B6B;
+  font-weight: 400;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.project-nav-item:hover .project-title {
+  color: #333;
+}
+
+.project-nav-item.active .project-title {
+  color: #1A1A1A;
+}
+
+.project-underline {
+  height: 1px;
+  background-color: #333;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* Right Side: Image */
+.feature-image-panel {
+  flex: 1;
+}
+
+.image-container-rect {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+.rect-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Footer Button */
+.footer-button-area {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.btn-more-albums {
+  display: inline-block;
+  background-color: #f9f9f9;
+  border: 1px solid #8C8C8C;
+  padding: 10px 30px;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.btn-more-albums:hover {
+  background-color: #ffffff;
+  border-color: #333;
+}
+
+@media (max-width: 1024px) {
+  .signature-main-layout {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 40px;
+  }
+  .project-navigation {
+    flex: 1;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .feature-image-panel {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-header-area {
+    margin-bottom: 42px;
+  }
+
+  .signature-section .work-heading {
+    font-size: 1.55rem !important;
+    letter-spacing: 0.28em;
+    margin-bottom: 14px;
+    text-align: center;
+  }
+
+  .signature-section .work-subtitle {
+    width: calc(100% - 56px);
+    max-width: 310px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-size: 0.98rem !important;
+    line-height: 1.55 !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .signature-section .work-heading {
+    font-size: 1.42rem !important;
+    letter-spacing: 0.24em;
+  }
+
+  .signature-section .work-subtitle {
+    max-width: 285px !important;
+    font-size: 0.88rem !important;
+    line-height: 1.5 !important;
+  }
+}

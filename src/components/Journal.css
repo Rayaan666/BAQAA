@@ -1,0 +1,269 @@
+.journal-section {
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  padding: 28px 0 28px;
+}
+
+.journal-section::before {
+  display: none;
+}
+
+.journal-header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 24px;
+  margin-bottom: 32px;
+}
+
+.journal-kicker {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #8C8C8C;
+  margin-bottom: 12px;
+}
+
+.journal-title {
+  font-family: var(--font-serif);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--dark-charcoal, #1a1a1a);
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.testimonial-editorial-shell {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  min-height: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 clamp(62px, 8vw, 110px);
+}
+
+.testimonial-stage {
+  position: relative;
+  width: min(900px, 100%);
+  min-height: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-watermark {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: clamp(220px, 25vw, 360px);
+  transform: translate(-50%, -50%);
+  opacity: 0.045;
+  filter: grayscale(1) sepia(0.2);
+  pointer-events: none;
+}
+
+.testimonial-watermark img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.testimonial-slide {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.testimonial-featured-text {
+  width: min(760px, 100%);
+  max-height: none;
+  overflow: visible;
+  margin: 0 auto;
+  padding: 0 8px;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1rem, 1.35vw, 1.18rem);
+  line-height: 1.7;
+  font-weight: 300;
+  color: var(--dark-charcoal, #1a1a1a);
+  white-space: pre-line;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.testimonial-featured-text::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonial-reviewer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.testimonial-stars {
+  display: flex;
+  gap: 5px;
+  color: var(--champagne-gold, #D4AF37);
+}
+
+.star-icon {
+  color: currentColor;
+}
+
+.testimonial-author {
+  font-family: var(--font-serif);
+  font-size: clamp(0.95rem, 1.2vw, 1.08rem);
+  letter-spacing: 0.04em;
+  color: var(--dark-charcoal, #1a1a1a);
+  margin: 0;
+}
+
+.testimonial-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #8C8C8C;
+  background: rgba(253, 252, 248, 0.5);
+  color: #8C8C8C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 4;
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease,
+    color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.testimonial-nav:hover {
+  transform: translateY(-50%) scale(1.05);
+  border-color: #333;
+  background: rgba(255, 255, 255, 0.82);
+  color: #333;
+  box-shadow: 0 18px 42px rgba(107, 39, 55, 0.08);
+}
+
+.testimonial-nav:focus-visible {
+  outline: 2px solid #8C8C8C;
+  outline-offset: 4px;
+}
+
+.testimonial-nav-prev {
+  left: clamp(24px, 5vw, 86px);
+}
+
+.testimonial-nav-next {
+  right: clamp(24px, 5vw, 86px);
+}
+
+.testimonials-footer {
+  position: relative;
+  z-index: 2;
+  margin-top: 24px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.btn-more-reviews {
+  display: inline-block;
+  background-color: #f9f9f9;
+  border: 1px solid #8C8C8C;
+  padding: 10px 30px;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: #333;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+.btn-more-reviews:hover {
+  background-color: #ffffff;
+  border-color: #333;
+}
+
+@media (max-width: 768px) {
+  .journal-section {
+    padding: 28px 0 32px;
+  }
+
+  .journal-header {
+    margin-bottom: 28px;
+  }
+
+  .journal-kicker {
+    letter-spacing: 0.28em;
+  }
+
+  .journal-title {
+    font-size: 1.8rem;
+    letter-spacing: 0.16em;
+  }
+
+  .testimonial-editorial-shell {
+    min-height: 360px;
+    padding: 0 46px;
+  }
+
+  .testimonial-stage {
+    min-height: 310px;
+  }
+
+  .testimonial-featured-text {
+    width: 100%;
+    max-height: none;
+    font-size: 1rem;
+    line-height: 1.65;
+    padding: 0 4px;
+  }
+
+  .testimonial-watermark {
+    width: 230px;
+    opacity: 0.045;
+  }
+
+  .testimonial-reviewer {
+    margin-top: 22px;
+  }
+
+  .testimonial-nav {
+    width: 36px;
+    height: 48px;
+    border-radius: 7px;
+  }
+
+  .testimonial-nav-prev {
+    left: 8px;
+  }
+
+  .testimonial-nav-next {
+    right: 8px;
+  }
+
+  .testimonials-footer {
+    padding: 0 20px;
+  }
+
+  .btn-more-reviews {
+    width: min(100%, 320px);
+    padding: 14px 20px;
+  }
+}

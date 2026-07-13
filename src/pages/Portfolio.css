@@ -1,0 +1,216 @@
+.portfolio-page {
+  background-color: var(--ivory);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 1. HERO OVERRIDES FOR PORTFOLIO */
+#portfolio-hero .hero-bg {
+  background-size: cover !important;
+  background-position: center center !important;
+  width: 100% !important;
+  transform: scale(1) !important;
+  animation: none !important;
+}
+
+#portfolio-hero .hero-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(18, 18, 18, 0.34) 0%,
+    rgba(18, 18, 18, 0.38) 55%,
+    rgba(18, 18, 18, 0.42) 100%
+  );
+}
+
+#portfolio-hero .hero-title {
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.9), 0 8px 28px rgba(0, 0, 0, 0.7);
+}
+
+#portfolio-hero .hero-description {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95), 0 6px 20px rgba(0, 0, 0, 0.75);
+}
+
+#portfolio-hero .btn-hero {
+  background-color: rgba(18, 18, 18, 0.12) !important;
+  border-color: rgba(250, 249, 246, 0.75) !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+}
+
+#portfolio-hero .btn-hero:hover {
+  background-color: var(--ivory) !important;
+  color: var(--maroon) !important;
+  border-color: var(--ivory) !important;
+  text-shadow: none;
+}
+
+/* COMMON SECTION STYLES */
+.portfolio-section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 5rem auto;
+  position: relative;
+  z-index: 5;
+}
+
+.portfolio-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 4.5vw, 4.5rem);
+  color: var(--dark-charcoal);
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.portfolio-desc {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--muted-grey);
+  font-weight: 300;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* 2. BUTHAINA GOES TO BOLLYWOOD */
+.bollywood-section {
+  padding: 120px 5%;
+  background-color: var(--ivory);
+  position: relative;
+}
+
+.bollywood-section .portfolio-heading {
+  font-family: var(--font-serif);
+  color: #2c2a29;
+  font-weight: 300;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+}
+
+.bollywood-section .portfolio-desc {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #6B6B6B;
+  font-weight: 400;
+}
+
+.bollywood-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.bolly-img-wrap {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  aspect-ratio: 4/5; /* beautiful uniform vertical crop */
+}
+
+.bolly-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+.bolly-img-wrap:hover img {
+  transform: scale(1.05);
+}
+
+/* 3. THE ROYAL COLLECTIVE */
+.royal-section {
+  padding: 120px 5% 150px 5%;
+  background-color: var(--ivory);
+  background-image: radial-gradient(circle at center, rgba(243, 229, 171, 0.15) 0%, rgba(250, 249, 246, 1) 70%);
+  position: relative;
+}
+
+.royal-section .portfolio-heading {
+  font-family: var(--font-serif);
+  color: #2c2a29;
+  font-weight: 300;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+}
+
+.royal-section .portfolio-desc {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #6B6B6B;
+  font-weight: 400;
+}
+
+.royal-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.royal-img-wrap {
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  padding: 12px;
+  background: var(--ivory);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  aspect-ratio: 3/4; /* slightly more portrait crop for the royal gallery */
+}
+
+.royal-inner-border {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--champagne-gold);
+  overflow: hidden;
+  position: relative;
+}
+
+.royal-inner-border img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+.royal-img-wrap:hover .royal-inner-border img {
+  transform: scale(1.05);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .bollywood-gallery, .royal-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bollywood-gallery, .royal-gallery {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .portfolio-section-header {
+    margin-bottom: 3rem;
+  }
+  .portfolio-hero-title {
+    font-size: 2.5rem;
+  }
+
+  .bollywood-section .portfolio-heading {
+    letter-spacing: 0.18em;
+  }
+
+  .royal-section .portfolio-heading {
+    letter-spacing: 0.18em;
+  }
+}

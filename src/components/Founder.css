@@ -1,0 +1,274 @@
+.founder-section {
+  background-color: #F0EAE1;
+  /* Clean, slightly darker beige to match Featured */
+  padding: 100px 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.founder-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+}
+
+/* Image Box Styling */
+.founder-image-box {
+  flex: 1.2;
+  z-index: 10;
+  transform: translateY(-20px);
+  /* Sits higher than the card */
+  margin-right: -100px;
+  /* Overlap effect */
+}
+
+.founder-image-frame {
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  border: 1px solid #FAF9F6;
+}
+
+.founder-portrait {
+  width: 100%;
+  aspect-ratio: auto;
+  /* Let the natural aspect ratio dictate height */
+  max-height: 600px;
+  object-fit: contain;
+  /* Shows full image without cropping */
+  display: block;
+}
+
+/* Card Box Styling */
+.founder-card-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.founder-info-card {
+  background-color: #fff;
+  border: 1px solid #E5D5BC;
+  /* Thin luxury beige-gold border */
+  padding: 0 60px 40px 140px;
+  /* Adjusted padding for more content */
+  width: 100%;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* Align left for editorial feel */
+  text-align: left;
+}
+
+.card-top-line {
+  width: 1px;
+  height: 60px;
+  background-color: #DEDEDE;
+  margin-bottom: 20px;
+  align-self: center;
+  /* Center the line as requested */
+}
+
+.founder-name-editorial {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 15px;
+  row-gap: 5px;
+  font-family: var(--font-serif);
+  color: #1A1A1A;
+  margin-bottom: 25px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.meet-label, .name-first, .name-last {
+  font-size: 1.8rem;
+  letter-spacing: 0.2em;
+  font-weight: 300;
+  color: #1A1A1A;
+}
+
+.meet-label {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.name-first {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.name-last {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+
+.founder-tagline {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #8C8C8C;
+  margin-bottom: 30px;
+  letter-spacing: 0.05em;
+}
+
+.founder-biography p {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #4A4A4A;
+  margin-bottom: 15px;
+}
+
+.biography-subtitle {
+  font-family: var(--font-serif);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 1.1rem;
+  color: #1A1A1A;
+  margin: 25px 0 15px 0;
+  font-weight: 500;
+}
+
+.founder-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #8C8C8C;
+  margin-top: 30px;
+  padding-left: 20px;
+  border-left: 2px solid #E5D5BC;
+  line-height: 1.6;
+}
+
+
+.founder-card-footer {
+  margin-top: 28px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-read-more {
+  display: inline-block;
+  background-color: #f9f9f9;
+  border: 1px solid #8C8C8C;
+  padding: 10px 30px;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: #333;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+.btn-read-more:hover {
+  background-color: #ffffff;
+  border-color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .founder-wrapper {
+    flex-direction: column;
+  }
+
+  .founder-image-box {
+    margin-right: 0;
+    transform: translateY(0);
+    margin-bottom: -50px;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .founder-card-box {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .founder-info-card {
+    padding: 40px 20px;
+  }
+
+  .name-first {
+    font-size: 2rem;
+  }
+
+  .name-last {
+    font-size: 2.5rem;
+  }
+}
+
+/* Laptop-only: push the card down */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .founder-card-box {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .founder-section {
+    padding: 50px 15px;
+  }
+  
+  .founder-image-box {
+    margin-bottom: -30px;
+  }
+
+  .founder-info-card {
+    padding: 40px 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card-top-line {
+    height: 40px;
+    margin-bottom: 15px;
+  }
+
+  .founder-name-editorial {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    width: 100%;
+  }
+
+  .meet-label, .name-first, .name-last {
+    font-size: 1.35rem !important;
+    letter-spacing: 0.1em;
+    display: inline;
+    white-space: nowrap;
+  }
+
+  .meet-label {
+    color: #1A1A1A;
+  }
+
+  .founder-tagline {
+    font-size: 0.85rem;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  .founder-biography p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    text-align: center;
+    color: #333;
+  }
+}
