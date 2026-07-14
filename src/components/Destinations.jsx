@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import './Destinations.css';
 
@@ -115,7 +115,7 @@ const AnimatedTravelPath = () => {
           <circle r="8" stroke="#8d8a86" strokeWidth="1" opacity="0.3" />
         </motion.g>
       </svg>
-      <div className="travel-path-label-right">DESTINATION</div>
+      <div className="travel-path-label-right">BAQAA'S WORLD</div>
     </div>
   );
 };
@@ -128,7 +128,7 @@ const Destinations = () => (
           GLOBAL CELEBRATIONS
         </span>
         <h2 className="dest-title">
-          TOP WEDDING DESTINATIONS
+          BAQAA'S WORLD
         </h2>
  
         <AnimatedTravelPath />
@@ -171,7 +171,7 @@ const Destinations = () => (
  
       <div className="destinations-footer-refined">
         <button className="btn-more-dest">
-          ALL DESTINATIONS
+          EXPLORE BAQAA'S WORLD
         </button>
       </div>
     </section>

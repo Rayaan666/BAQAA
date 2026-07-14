@@ -1734,6 +1734,83 @@
 }
 
 @media (max-width: 768px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .bazar-page {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .bazar-page *,
+  .bazar-page *::before,
+  .bazar-page *::after {
+    box-sizing: border-box;
+  }
+
+  .bazar-page img,
+  .bazar-page video,
+  .bazar-page iframe,
+  .bazar-page svg {
+    max-width: 100%;
+  }
+
+  .bazar-hero {
+    min-height: 100svh;
+    width: 100%;
+  }
+
+  .bazar-hero-content {
+    width: 100%;
+    padding: 0 58px;
+  }
+
+  .bazar-hero-title {
+    font-size: clamp(2rem, 10vw, 3rem) !important;
+    line-height: 1.08;
+  }
+
+  .bazar-hero-content .hero-description {
+    font-size: 0.94rem;
+    line-height: 1.55;
+  }
+
+  .bazar-story-container,
+  .themes-index-inner,
+  .bazar-editorial-inner,
+  .catalogue-inner,
+  .bazar-connect-card,
+  .bazar-video-inner {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .themes-index-list {
+    width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .catalogue-grid,
+  .catalogue-grid-images-only {
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .catalogue-card,
+  .catalogue-card-image-only,
+  .catalogue-image-wrap {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .bazar-connect-social {
+    overflow-wrap: anywhere;
+  }
+
   .bazar-hero-bg {
     background-size: var(--bazar-hero-mobile-size, cover);
     background-position: var(--bazar-hero-mobile-position, center center);

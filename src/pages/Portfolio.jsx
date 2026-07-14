@@ -2,38 +2,48 @@ import { useEffect } from 'react';
 import './Portfolio.css';
 
 const bollywoodImages = [
+  '/portfolio/The Royal Collective/11.jpeg',
+  '/portfolio/The Royal Collective/23 a.jpg',
+  '/portfolio/The Royal Collective/29.jpeg',
+  '/portfolio/The Royal Collective/39.jpeg',
+  '/portfolio/The Royal Collective/44 a.jpg',
+  '/portfolio/The Royal Collective/45.jpeg',
+  '/portfolio/The Royal Collective/46a.jpg',
+  '/portfolio/The Royal Collective/47.jpeg',
+  '/portfolio/The Royal Collective/49.jpeg',
+  '/portfolio/The Royal Collective/50.jpeg'
+];
+
+const royalImages = [
   '/portfolio/Buthaina Goes to Bollywood/9375922517.jpg_exif1.jpg',
   '/portfolio/Buthaina Goes to Bollywood/9375922548.jpg_exif1.jpg',
   '/portfolio/Buthaina Goes to Bollywood/9375922557.jpg_exif1.jpg',
   '/portfolio/Buthaina Goes to Bollywood/9375922645.jpg_exif1.jpg',
   '/portfolio/Buthaina Goes to Bollywood/9375922715.jpg_exif1.jpg',
   '/portfolio/Buthaina Goes to Bollywood/9375922728.jpg_exif1.jpg',
-  '/portfolio/Buthaina Goes to Bollywood/9375922833.jpg_exif1.jpg',
   '/portfolio/Buthaina Goes to Bollywood/9375922851.jpg_exif1.jpg',
-  '/portfolio/Buthaina Goes to Bollywood/9375923689.jpg_exif1.jpg',
   '/portfolio/Buthaina Goes to Bollywood/9375923693.jpg_exif1.jpg',
-  '/portfolio/Buthaina Goes to Bollywood/9375923795.jpg_exif1.jpg',
-  '/portfolio/Buthaina Goes to Bollywood/9375923824.jpg_exif1.jpg',
-  '/portfolio/Buthaina Goes to Bollywood/9375923829.jpg_exif1.jpg'
+  '/portfolio/Buthaina Goes to Bollywood/9375923795.jpg_exif1.jpg'
 ];
 
-const royalImages = [
-  '/portfolio/The Royal Collective/11.jpeg',
-  '/portfolio/The Royal Collective/23 a.jpg',
-  '/portfolio/The Royal Collective/24.jpeg',
-  '/portfolio/The Royal Collective/29.jpeg',
-  '/portfolio/The Royal Collective/37b.jpeg',
-  '/portfolio/The Royal Collective/39.jpeg',
-  '/portfolio/The Royal Collective/43.jpeg',
-  '/portfolio/The Royal Collective/44 a.jpg',
-  '/portfolio/The Royal Collective/45.jpeg',
-  '/portfolio/The Royal Collective/45a.jpg',
-  '/portfolio/The Royal Collective/46.jpeg',
-  '/portfolio/The Royal Collective/46a.jpg',
-  '/portfolio/The Royal Collective/47.jpeg',
-  '/portfolio/The Royal Collective/49.jpeg',
-  '/portfolio/The Royal Collective/50.jpeg'
-];
+const PortfolioSocialLinks = () => (
+  <aside className="portfolio-social-cta" aria-label="Discover more from BAQAA">
+    <p>See more from this celebration and step behind the scenes with BAQAA on</p>
+    <nav className="portfolio-social-links" aria-label="BAQAA social channels">
+      <a href="https://www.instagram.com/baqaa_wedding_events/" target="_blank" rel="noopener noreferrer">
+        Instagram
+      </a>
+      <span aria-hidden="true">·</span>
+      <a href="https://www.youtube.com/@baqaaweddingevents" target="_blank" rel="noopener noreferrer">
+        YouTube
+      </a>
+      <span aria-hidden="true">·</span>
+      <a href="https://www.pinterest.com/baqaawdc/a-fun-high-energy-unique-white-party-by-baqaa/" target="_blank" rel="noopener noreferrer">
+        Pinterest
+      </a>
+    </nav>
+  </aside>
+);
 
 const Portfolio = () => {
   useEffect(() => {
@@ -41,7 +51,7 @@ const Portfolio = () => {
   }, []);
 
   const scrollToWork = () => {
-    document.getElementById('bollywood')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('bollywood')?.scrollIntoView({ behavior: 'auto' });
   };
 
   return (
@@ -71,11 +81,6 @@ const Portfolio = () => {
           </div>
         </div>
 
-        <div className="particles-container">
-          {[...Array(20)].map((_, i) => (
-            <div key={i} className={`particle p-${i}`}></div>
-          ))}
-        </div>
       </section>
 
       {/* 2. BUTHAINA GOES TO BOLLYWOOD */}
@@ -94,6 +99,8 @@ const Portfolio = () => {
             </div>
           ))}
         </div>
+
+        <PortfolioSocialLinks />
       </section>
 
       {/* 3. THE ROYAL COLLECTIVE */}
@@ -114,6 +121,8 @@ const Portfolio = () => {
             </div>
           ))}
         </div>
+
+        <PortfolioSocialLinks />
       </section>
 
     </div>

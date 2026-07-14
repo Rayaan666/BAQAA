@@ -69,6 +69,12 @@
   position: relative;
 }
 
+/* Join only the first pair at their lower inner edges. */
+.polaroid-card-refined:nth-child(2),
+.polaroid-card-refined:nth-child(4) {
+  margin-left: -30px;
+}
+
 .masking-tape {
   position: absolute;
   top: -15px;
@@ -163,6 +169,11 @@
 }
 
 @media (max-width: 768px) {
+  .polaroid-card-refined:nth-child(2),
+  .polaroid-card-refined:nth-child(4) {
+    margin-left: 0;
+  }
+
   .polaroid-card-refined {
     rotate: 0deg !important;
     transform: none !important;

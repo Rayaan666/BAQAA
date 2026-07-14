@@ -60,6 +60,7 @@ const Navbar = () => {
             if (item === 'About') href = '/about';
             if (item === 'Contact') href = '/contact';
             if (item === 'Blogs') href = '/blog';
+            if (item === 'Portfolio') href = '/portfolio';
 
             const isComingSoon = ['Weddings', 'Events'].includes(item);
 
@@ -68,6 +69,7 @@ const Navbar = () => {
               (item === 'About' && location.pathname === '/about') ||
               (item === 'Contact' && location.pathname === '/contact') ||
               (item === 'Blogs' && location.pathname === '/blog') ||
+              (item === 'Portfolio' && location.pathname === '/portfolio') ||
               (item === 'BAQAA BAZAR' && location.pathname === '/baqaa-bazar') ||
               (!['Home', 'About', 'Contact', 'Blogs', 'BAQAA BAZAR', 'Weddings', 'Portfolio'].includes(item) &&
                 location.pathname === '/' &&
@@ -75,20 +77,7 @@ const Navbar = () => {
 
             return (
               <li key={item}>
-                {item === 'Portfolio' ? (
-                  <Link
-                    to="/portfolio"
-                    className="nav-link text-editorial"
-                    aria-disabled="true"
-                    onClick={(event) => {
-                      event.preventDefault();
-                      closeMenu();
-                    }}
-                  >
-                    {item}
-                    <span className="underline" />
-                  </Link>
-                ) : ['Home', 'About', 'Contact', 'Blogs', 'BAQAA BAZAR'].includes(item) ? (
+                {['Home', 'About', 'Contact', 'Blogs', 'BAQAA BAZAR', 'Portfolio'].includes(item) ? (
                   <Link 
                     to={href}
                     className={`nav-link text-editorial ${isActive ? 'active' : ''}`}

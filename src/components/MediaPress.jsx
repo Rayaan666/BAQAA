@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './MediaPress.css';
 
@@ -10,8 +10,11 @@ const mediaData = [
     link: 'Visionary Leadership & Luxury Wedding Editorial'
   },
   {
-    image: '/media/10.jpg',
-    quote: 'Bodrum, Turkey hosted a landmark destination wedding as Sameera Sabharwal and Nikhil Nanda celebrated their three-day wedding at Hyde Bodrum, curated by BAQAA, the Dubai-based luxury wedding and events company led by Rachna Chadha.',
+    images: [
+      '/media/apex/bodrum-1.jpg',
+      '/media/apex/bodrum-2.jpg'
+    ],
+    quote: 'Bodrum, Turkey set the stage for a landmark luxury destination wedding as Sameera Sabharwal and Nikhil Nanda were celebrated at Hyde Bodrum. Curated and orchestrated by Rachna Chadha, Founder of BAQAA, the three-day celebration hosted 450 guests in a complete property buyout at a newly opened, adults-only resort with no pre-existing event infrastructure. Every space was conceptualised and built from the ground up — from a floating mandap in the Aegean Sea to a Sangeet stage suspended over the pool, alongside immersive garden experiences. Executed as one of BAQAA’s most complex turnkey productions, the wedding featured five bespoke venues, seamless overnight transformations within a fully operational resort, and a 60-page culinary experience delivered by 100 chefs. Another BAQAA benchmark!',
     publication: 'EXPERIENTIAL PLANNER',
     link: 'Landmark Three-Day Destination Wedding at Hyde Bodrum'
   },
@@ -109,14 +112,25 @@ const MediaPress = () => {
               className="media-content-inner"
             >
               {/* Magazine Cover */}
-              <div className={`magazine-cover-box ${currentIndex === 1 ? 'square-mode' : ((currentIndex === 7 || currentIndex === 8 || currentIndex === 9) ? 'landscape-mode' : '')}`}>
-                <img src={mediaData[currentIndex].image} alt="Media Snippet" className="magazine-img" />
+              <div className={`magazine-cover-box ${mediaData[currentIndex].images ? 'multi-image-mode' : ((currentIndex === 7 || currentIndex === 8 || currentIndex === 9) ? 'landscape-mode' : '')}`}>
+                {mediaData[currentIndex].images ? (
+                  mediaData[currentIndex].images.map((image, index) => (
+                    <img
+                      key={image}
+                      src={image}
+                      alt={`Hyde Bodrum wedding production ${index + 1}`}
+                      className="magazine-img"
+                    />
+                  ))
+                ) : (
+                  <img src={mediaData[currentIndex].image} alt="Media Snippet" className="magazine-img" />
+                )}
               </div>
 
               {/* Quote Panel */}
               <div className="quote-panel-refined">
                 <div className="quote-mark open">“</div>
-                <p className="press-quote-text">
+                <p className={`press-quote-text ${currentIndex === 1 ? 'press-quote-long' : ''}`}>
                   {mediaData[currentIndex].quote}
                 </p>
                 <div className="quote-mark close">”</div>
