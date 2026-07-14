@@ -85,6 +85,10 @@
   display: block;
 }
 
+.square-mode .magazine-img {
+  aspect-ratio: 1 / 1;
+}
+
 /* 5th Snippet Landscape Override */
 .magazine-cover-box.landscape-mode {
   flex: 0 0 450px;

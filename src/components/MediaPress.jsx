@@ -10,6 +10,12 @@ const mediaData = [
     link: 'Visionary Leadership & Luxury Wedding Editorial'
   },
   {
+    image: '/media/10.jpg',
+    quote: 'Bodrum, Turkey hosted a landmark destination wedding as Sameera Sabharwal and Nikhil Nanda celebrated their three-day wedding at Hyde Bodrum, curated by BAQAA, the Dubai-based luxury wedding and events company led by Rachna Chadha.',
+    publication: 'EXPERIENTIAL PLANNER',
+    link: 'Landmark Three-Day Destination Wedding at Hyde Bodrum'
+  },
+  {
     image: '/media/9.jpg',
     quote: 'A timeless wedding editorial capturing the quiet elegance and heartfelt romance of Sameera & Nikhil. The feature celebrates intimate moments, refined aesthetics, and a love story defined by grace, emotion, and everlasting commitment, creating an atmosphere of luxury, warmth, and modern romance.',
     publication: 'ELLE FEATURE',
@@ -103,7 +109,7 @@ const MediaPress = () => {
               className="media-content-inner"
             >
               {/* Magazine Cover */}
-              <div className={`magazine-cover-box ${(currentIndex === 6 || currentIndex === 7 || currentIndex === 8) ? 'landscape-mode' : ''}`}>
+              <div className={`magazine-cover-box ${currentIndex === 1 ? 'square-mode' : ((currentIndex === 7 || currentIndex === 8 || currentIndex === 9) ? 'landscape-mode' : '')}`}>
                 <img src={mediaData[currentIndex].image} alt="Media Snippet" className="magazine-img" />
               </div>
 
